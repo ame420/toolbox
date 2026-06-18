@@ -22,6 +22,10 @@ https://toolbox-roan-iota.vercel.app
 - 📱 **二维码生成器**：文本/URL 一键生成二维码，支持自定义颜色与下载
 - 🔍 **正则表达式测试器**：实时高亮匹配结果，支持替换预览
 - 🎨 **颜色转换器**：HEX / RGB / HSL / OKLCH 互转，自动检查对比度
+- 🧬 **JWT 解码器**：本地解析 JWT 的 Header、Payload 与 Signature
+- 📝 **文本对比**：高亮两段文本的新增、删除与相同内容
+- 📏 **单位换算器**：长度、重量、温度、数据存储、面积、体积换算
+- 📊 **访问统计**：集成 Vercel Analytics，保护隐私的流量分析
 - 🌐 **多语言**：支持中文 / 英文切换
 - 🎨 **多主题**：浅色、深色、蓝色、绿色四种主题
 - 🏷️ **分类筛选**：首页支持按工具类型筛选
@@ -37,6 +41,7 @@ https://toolbox-roan-iota.vercel.app
 - [tesseract.js](https://github.com/naptha/tesseract.js) 浏览器端 OCR
 - [lunar-javascript](https://github.com/6tail/lunar-javascript) 农历计算
 - [next-themes](https://github.com/pacocoursey/next-themes) 主题管理
+- [@vercel/analytics](https://vercel.com/analytics) 访问统计
 
 ## 本地开发
 
@@ -94,7 +99,10 @@ toolbox/
 │       ├── base64/         # Base64 编解码
 │       ├── qrcode/         # 二维码生成器
 │       ├── regex/          # 正则表达式测试器
-│       └── color/          # 颜色转换器
+│       ├── color/          # 颜色转换器
+│       ├── jwt/            # JWT 解码器
+│       ├── diff/           # 文本对比
+│       └── unit/           # 单位换算器
 ├── components/             # 公共组件
 │   ├── ui/                 # shadcn/ui 组件
 │   ├── site-header.tsx     # 全局头部（语言/主题切换）

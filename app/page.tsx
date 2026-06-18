@@ -15,6 +15,9 @@ import {
   QrCode,
   TextSearch,
   Paintbrush,
+  Fingerprint,
+  FileDiff,
+  Ruler,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { ToolCard } from "@/components/tool-card";
@@ -121,6 +124,27 @@ const TOOLS: ToolDef[] = [
     descKey: "colorDesc",
     tags: ["design", "dev"],
   },
+  {
+    href: "/tools/jwt",
+    icon: Fingerprint,
+    titleKey: "jwtTitle",
+    descKey: "jwtDesc",
+    tags: ["dev", "security"],
+  },
+  {
+    href: "/tools/diff",
+    icon: FileDiff,
+    titleKey: "diffTitle",
+    descKey: "diffDesc",
+    tags: ["dev", "text"],
+  },
+  {
+    href: "/tools/unit",
+    icon: Ruler,
+    titleKey: "unitTitle",
+    descKey: "unitDesc",
+    tags: ["dev", "time"],
+  },
 ];
 
 export default function Home() {
@@ -173,8 +197,9 @@ export default function Home() {
       </main>
 
       <footer className="border-t bg-card py-6">
-        <div className="mx-auto max-w-7xl px-4 text-center text-sm text-muted-foreground sm:px-6 lg:px-8">
-          {t("footer")}
+        <div className="mx-auto max-w-7xl space-y-1 px-4 text-center text-sm text-muted-foreground sm:px-6 lg:px-8">
+          <p>{t("footer")}</p>
+          <p>{t("analytics")}</p>
         </div>
       </footer>
     </div>
