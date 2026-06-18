@@ -25,6 +25,9 @@ https://toolbox-roan-iota.vercel.app
 - 🧬 **JWT 解码器**：本地解析 JWT 的 Header、Payload 与 Signature
 - 📝 **文本对比**：高亮两段文本的新增、删除与相同内容
 - 📏 **单位换算器**：长度、重量、温度、数据存储、面积、体积换算
+- 📝 **Markdown 编辑器**：实时预览 Markdown，支持导出 HTML
+- 🖼️ **图片压缩**：浏览器端压缩并转换图片格式（JPG/PNG/WebP）
+- #️⃣ **哈希生成器**：MD5 / SHA-1 / SHA-256 / SHA-512 文本哈希
 - 📊 **访问统计**：集成 Vercel Analytics，保护隐私的流量分析
 - 🌐 **多语言**：支持中文 / 英文切换
 - 🎨 **多主题**：浅色、深色、蓝色、绿色四种主题
@@ -42,6 +45,8 @@ https://toolbox-roan-iota.vercel.app
 - [lunar-javascript](https://github.com/6tail/lunar-javascript) 农历计算
 - [next-themes](https://github.com/pacocoursey/next-themes) 主题管理
 - [@vercel/analytics](https://vercel.com/analytics) 访问统计
+- [marked](https://marked.js.org/) + [isomorphic-dompurify](https://github.com/kkomelin/isomorphic-dompurify) Markdown 渲染与消毒
+- [js-md5](https://github.com/emn178/js-md5) MD5 计算
 
 ## 本地开发
 
@@ -102,7 +107,10 @@ toolbox/
 │       ├── color/          # 颜色转换器
 │       ├── jwt/            # JWT 解码器
 │       ├── diff/           # 文本对比
-│       └── unit/           # 单位换算器
+│       ├── unit/           # 单位换算器
+│       ├── markdown/       # Markdown 编辑器
+│       ├── compress/       # 图片压缩
+│       └── hash/           # 哈希生成器
 ├── components/             # 公共组件
 │   ├── ui/                 # shadcn/ui 组件
 │   ├── site-header.tsx     # 全局头部（语言/主题切换）

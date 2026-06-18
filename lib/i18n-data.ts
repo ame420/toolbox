@@ -310,6 +310,43 @@ export const translations = {
     unitGallon: "加仑",
     unitCup: "杯",
 
+    // Tool: Markdown Editor
+    markdownTitle: "Markdown 编辑器",
+    markdownDesc: "实时预览 Markdown 渲染效果，支持导出 HTML。",
+    markdownInput: "Markdown",
+    markdownInputPlaceholder: "输入 Markdown 内容...",
+    markdownPreview: "预览",
+    markdownExportHtml: "导出 HTML",
+
+    // Tool: Image Compressor
+    compressTitle: "图片压缩",
+    compressDesc: "在浏览器端压缩图片并转换格式，支持 JPG、PNG、WebP 导出。",
+    compressQuality: "质量",
+    compressFormat: "输出格式",
+    compressFormatOriginal: "保持原格式",
+    compressFormatJpeg: "JPEG",
+    compressFormatPng: "PNG",
+    compressFormatWebp: "WebP",
+    compressWidth: "宽度（像素）",
+    compressHeight: "高度（像素）",
+    compressKeepRatio: "保持宽高比",
+    compressPleaseUpload: "请先上传图片",
+    compressDownload: "下载图片",
+    compressSuccess: "压缩完成",
+    compressError: "压缩失败",
+
+    // Tool: Hash Generator
+    hashTitle: "哈希生成器",
+    hashDesc: "计算文本的 MD5、SHA-1、SHA-256、SHA-512 哈希值。",
+    hashInput: "输入文本",
+    hashAlgorithm: "算法",
+    hashMd5: "MD5",
+    hashSha1: "SHA-1",
+    hashSha256: "SHA-256",
+    hashSha512: "SHA-512",
+    hashUppercase: "大写字母",
+    hashPleaseInput: "请输入要计算哈希的文本",
+
     // Site analytics
     analytics: "访问统计由 Vercel Analytics 提供",
   },
@@ -621,6 +658,43 @@ export const translations = {
     unitMilliliter: "milliliter",
     unitGallon: "gallon",
     unitCup: "cup",
+
+    // Tool: Markdown Editor
+    markdownTitle: "Markdown Editor",
+    markdownDesc: "Live preview Markdown rendering and export HTML.",
+    markdownInput: "Markdown",
+    markdownInputPlaceholder: "Enter Markdown content...",
+    markdownPreview: "Preview",
+    markdownExportHtml: "Export HTML",
+
+    // Tool: Image Compressor
+    compressTitle: "Image Compressor",
+    compressDesc: "Compress and convert images locally, supporting JPEG, PNG and WebP output.",
+    compressQuality: "Quality",
+    compressFormat: "Output format",
+    compressFormatOriginal: "Keep original",
+    compressFormatJpeg: "JPEG",
+    compressFormatPng: "PNG",
+    compressFormatWebp: "WebP",
+    compressWidth: "Width (px)",
+    compressHeight: "Height (px)",
+    compressKeepRatio: "Keep aspect ratio",
+    compressPleaseUpload: "Please upload an image first",
+    compressDownload: "Download image",
+    compressSuccess: "Compressed",
+    compressError: "Compression failed",
+
+    // Tool: Hash Generator
+    hashTitle: "Hash Generator",
+    hashDesc: "Compute MD5, SHA-1, SHA-256 and SHA-512 hashes for text.",
+    hashInput: "Input text",
+    hashAlgorithm: "Algorithm",
+    hashMd5: "MD5",
+    hashSha1: "SHA-1",
+    hashSha256: "SHA-256",
+    hashSha512: "SHA-512",
+    hashUppercase: "Uppercase",
+    hashPleaseInput: "Please enter text to hash",
 
     // Site analytics
     analytics: "Analytics powered by Vercel Analytics",

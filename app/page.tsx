@@ -18,6 +18,9 @@ import {
   Fingerprint,
   FileDiff,
   Ruler,
+  FileText,
+  Image,
+  Hash,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { ToolCard } from "@/components/tool-card";
@@ -144,6 +147,27 @@ const TOOLS: ToolDef[] = [
     titleKey: "unitTitle",
     descKey: "unitDesc",
     tags: ["dev", "time"],
+  },
+  {
+    href: "/tools/markdown",
+    icon: FileText,
+    titleKey: "markdownTitle",
+    descKey: "markdownDesc",
+    tags: ["text", "dev"],
+  },
+  {
+    href: "/tools/compress",
+    icon: Image,
+    titleKey: "compressTitle",
+    descKey: "compressDesc",
+    tags: ["image"],
+  },
+  {
+    href: "/tools/hash",
+    icon: Hash,
+    titleKey: "hashTitle",
+    descKey: "hashDesc",
+    tags: ["security", "dev"],
   },
 ];
 
