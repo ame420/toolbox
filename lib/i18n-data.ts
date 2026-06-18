@@ -1,0 +1,379 @@
+export type Lang = "zh" | "en";
+
+export const translations = {
+  zh: {
+    // Site
+    siteTitle: "在线小工具箱",
+    siteSubtitle: "免费、开源、可部署到 Vercel 的实用工具集合。所有数据处理均在浏览器本地完成，保护隐私。",
+    siteName: "在线小工具箱",
+    footer: "开源在线工具箱 · 本地处理 · 保护隐私",
+    backToHome: "返回首页",
+
+    // Common actions
+    copy: "复制",
+    clear: "清空",
+    generate: "生成",
+    convert: "转换",
+    format: "格式化",
+    minify: "压缩",
+    encode: "编码",
+    decode: "解码",
+    swap: "交换",
+    start: "开始",
+    copied: "已复制到剪贴板",
+    pleaseInput: "请输入内容",
+    success: "操作成功",
+    error: "操作失败",
+
+    // Categories
+    categoryAll: "全部",
+    categoryText: "文本",
+    categorySecurity: "安全",
+    categoryImage: "图像",
+    categoryOcr: "OCR",
+    categoryDesign: "设计",
+    categoryVoice: "语音",
+    categoryCalendar: "日历",
+    categoryDev: "开发",
+    categoryTime: "时间",
+    noTools: "该分类下暂无工具",
+
+    // Language toggle
+    language: "语言",
+    langZh: "中文",
+    langEn: "English",
+
+    // Theme toggle
+    theme: "主题",
+    themeLight: "浅色",
+    themeDark: "深色",
+    themeBlue: "蓝色",
+    themeGreen: "绿色",
+
+    // Tool: Converter
+    converterTitle: "中文简繁转换",
+    converterDesc: "支持中国大陆、台湾、香港地区的简体与繁体相互转换。",
+    converterMode: "选择转换方向",
+    converterInput: "输入",
+    converterOutput: "结果",
+    converterOutputPlaceholder: "转换结果...",
+    converterPleaseInput: "请输入需要转换的文字",
+    converterInvalidMode: "转换模式无效",
+    converterSuccess: "转换完成",
+    converterError: "转换失败",
+    modeS2T: "简体 → 繁体",
+    modeT2S: "繁体 → 简体",
+    modeS2TW: "简体 → 台湾繁体",
+    modeTW2S: "台湾繁体 → 简体",
+    modeS2HK: "简体 → 香港繁体",
+    modeHK2S: "香港繁体 → 简体",
+
+    // Tool: Password
+    passwordTitle: "随机密码生成",
+    passwordDesc: "使用浏览器加密安全随机数生成高强度密码。",
+    passwordLength: "密码长度",
+    includeUppercase: "包含大写字母",
+    includeLowercase: "包含小写字母",
+    includeNumbers: "包含数字",
+    includeSymbols: "包含符号",
+    excludeAmbiguous: "排除易混淆字符（0、O、1、l、I）",
+    generatePassword: "生成密码",
+    strengthNone: "未生成",
+    strengthWeak: "弱",
+    strengthMedium: "中",
+    strengthStrong: "强",
+    passwordTypeRequired: "请至少选择一种字符类型",
+
+    // Tool: OCR
+    ocrTitle: "图片转文字",
+    ocrDesc: "使用 tesseract.js 在浏览器本地识别图片中的文字，无需上传服务器。",
+    ocrNotice: "首次识别会下载语言训练数据（中文约 10MB），请耐心等待。所有处理均在本地完成。",
+    ocrLang: "识别语言",
+    ocrLangChiSimEng: "中文 + 英文",
+    ocrLangEng: "英文",
+    ocrLangChiSim: "中文简体",
+    ocrLangChiTra: "中文繁体",
+    ocrStart: "开始识别",
+    ocrRecognizing: "识别中",
+    ocrPleaseUpload: "请先上传图片",
+    ocrSuccess: "识别完成",
+    ocrError: "识别失败，请重试",
+    ocrResultPlaceholder: "识别结果...",
+    ocrImageAlt: "待识别图片",
+
+    // Tool: RGB
+    rgbTitle: "图片 RGB 提取",
+    rgbDesc: "上传图片后点击图片任意位置，即可提取该像素的 RGB 与十六进制色值。",
+    rgbHint: "点击图片提取颜色",
+    rgbImageAlt: "待提取图片",
+    rgbHex: "HEX",
+    rgbCoord: "坐标",
+    rgbRecent: "最近提取",
+
+    // Tool: TTS
+    ttsTitle: "文字语音朗读",
+    ttsDesc: "使用浏览器内置语音合成引擎朗读文字，支持语速、音调调节。",
+    ttsVoice: "语音",
+    ttsRate: "语速",
+    ttsPitch: "音调",
+    ttsSpeak: "朗读",
+    ttsPause: "暂停",
+    ttsResume: "继续",
+    ttsStop: "停止",
+    ttsPleaseInput: "请输入要朗读的文字",
+    ttsError: "朗读失败",
+    ttsNoVoices: "当前浏览器未返回可用语音，朗读功能可能不可用。",
+
+    // Tool: Calendar CN
+    calendarCnTitle: "中国大陆日历",
+    calendarCnDesc: "显示公历与农历，并标注中国大陆法定节假日与调休。",
+
+    // Tool: Calendar US
+    calendarUsTitle: "美国日历",
+    calendarUsDesc: "美国联邦法定节假日，包括固定日期与浮动星期一节日。",
+
+    // Calendar common
+    calendarToday: "今天",
+    calendarHoliday: "法定节假日",
+    calendarWorkday: "调休补班",
+    weekDays: "日,一,二,三,四,五,六",
+    monthNames: "一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月",
+
+    // Tool: JSON
+    jsonTitle: "JSON 格式化",
+    jsonDesc: "JSON 美化、压缩、校验，支持按键排序与自定义缩进。",
+    jsonInputLabel: "输入 JSON",
+    jsonOutputLabel: "输出",
+    jsonInputPlaceholder: '{"hello": "world"}',
+    jsonOutputPlaceholder: "格式化后的 JSON...",
+    jsonPleaseInput: "请输入 JSON",
+    jsonFormatSuccess: "格式化成功",
+    jsonMinifySuccess: "压缩成功",
+    jsonError: "JSON 格式错误",
+    jsonSortKeys: "按键排序",
+    jsonIndent: "缩进",
+
+    // Tool: Timestamp
+    timestampTitle: "时间戳转换",
+    timestampDesc: "Unix 时间戳与北京时间相互转换，自动判断秒/毫秒。",
+    timestampCurrent: "当前时间",
+    timestampUseNow: "使用现在",
+    timestampUnix: "Unix 时间戳（秒）",
+    timestampBeijing: "北京时间",
+    timestampInvalid: "请输入有效的时间戳",
+    timestampInvalidDate: "无效的时间戳",
+    timestampToDate: "时间戳 → 日期",
+    timestampToTimestamp: "日期 → 时间戳",
+    timestampPlaceholder: "如 1700000000",
+    timestampFilled: "已填入当前时间",
+
+    // Tool: Base64
+    base64Title: "Base64 编解码",
+    base64Desc: "文本与 Base64 相互转换，支持中文字符。",
+    base64Source: "原文",
+    base64Encoded: "Base64",
+    base64Result: "结果...",
+    base64Encode: "Base64 编码",
+    base64Decode: "Base64 解码",
+    base64EncodeSuccess: "编码成功",
+    base64DecodeSuccess: "解码成功",
+    base64EncodeError: "编码失败",
+    base64DecodeError: "解码失败，请检查 Base64 格式",
+
+    // File drop zone
+    dropzoneDrag: "释放以上传",
+    dropzoneClick: "点击或拖拽图片到此处",
+    dropzoneSupport: "支持 JPG、PNG、WebP，最大 {size}MB",
+    dropzoneNotImage: "请上传图片文件",
+    dropzoneTooLarge: "文件过大，请上传小于 {size}MB 的图片",
+  },
+  en: {
+    // Site
+    siteTitle: "Online Toolbox",
+    siteSubtitle: "A free, open-source collection of utility tools deployable to Vercel. All data is processed locally in your browser.",
+    siteName: "Online Toolbox",
+    footer: "Open Source Toolbox · Local Processing · Privacy First",
+    backToHome: "Back to home",
+
+    // Common actions
+    copy: "Copy",
+    clear: "Clear",
+    generate: "Generate",
+    convert: "Convert",
+    format: "Format",
+    minify: "Minify",
+    encode: "Encode",
+    decode: "Decode",
+    swap: "Swap",
+    start: "Start",
+    copied: "Copied to clipboard",
+    pleaseInput: "Please enter content",
+    success: "Success",
+    error: "Failed",
+
+    // Categories
+    categoryAll: "All",
+    categoryText: "Text",
+    categorySecurity: "Security",
+    categoryImage: "Image",
+    categoryOcr: "OCR",
+    categoryDesign: "Design",
+    categoryVoice: "Voice",
+    categoryCalendar: "Calendar",
+    categoryDev: "Dev",
+    categoryTime: "Time",
+    noTools: "No tools in this category",
+
+    // Language toggle
+    language: "Language",
+    langZh: "中文",
+    langEn: "English",
+
+    // Theme toggle
+    theme: "Theme",
+    themeLight: "Light",
+    themeDark: "Dark",
+    themeBlue: "Blue",
+    themeGreen: "Green",
+
+    // Tool: Converter
+    converterTitle: "Chinese Converter",
+    converterDesc: "Convert between Simplified and Traditional Chinese for mainland China, Taiwan, and Hong Kong.",
+    converterMode: "Select conversion direction",
+    converterInput: "Input",
+    converterOutput: "Output",
+    converterOutputPlaceholder: "Conversion result...",
+    converterPleaseInput: "Please enter text to convert",
+    converterInvalidMode: "Invalid conversion mode",
+    converterSuccess: "Converted",
+    converterError: "Conversion failed",
+    modeS2T: "Simplified → Traditional",
+    modeT2S: "Traditional → Simplified",
+    modeS2TW: "Simplified → Taiwan",
+    modeTW2S: "Taiwan → Simplified",
+    modeS2HK: "Simplified → Hong Kong",
+    modeHK2S: "Hong Kong → Simplified",
+
+    // Tool: Password
+    passwordTitle: "Password Generator",
+    passwordDesc: "Generate strong passwords using cryptographically secure random numbers in your browser.",
+    passwordLength: "Password length",
+    includeUppercase: "Include uppercase",
+    includeLowercase: "Include lowercase",
+    includeNumbers: "Include numbers",
+    includeSymbols: "Include symbols",
+    excludeAmbiguous: "Exclude ambiguous (0, O, 1, l, I)",
+    generatePassword: "Generate password",
+    strengthNone: "Not generated",
+    strengthWeak: "Weak",
+    strengthMedium: "Medium",
+    strengthStrong: "Strong",
+    passwordTypeRequired: "Please select at least one character type",
+
+    // Tool: OCR
+    ocrTitle: "Image to Text",
+    ocrDesc: "Recognize text in images locally with tesseract.js. No server upload required.",
+    ocrNotice: "First recognition downloads language training data (~10MB for Chinese). Please be patient. All processing is local.",
+    ocrLang: "Language",
+    ocrLangChiSimEng: "Chinese + English",
+    ocrLangEng: "English",
+    ocrLangChiSim: "Simplified Chinese",
+    ocrLangChiTra: "Traditional Chinese",
+    ocrStart: "Start recognition",
+    ocrRecognizing: "Recognizing",
+    ocrPleaseUpload: "Please upload an image first",
+    ocrSuccess: "Recognition complete",
+    ocrError: "Recognition failed, please retry",
+    ocrResultPlaceholder: "Recognition result...",
+    ocrImageAlt: "Image to recognize",
+
+    // Tool: RGB
+    rgbTitle: "Image RGB Picker",
+    rgbDesc: "Upload an image and click anywhere to extract the pixel's RGB and hex color values.",
+    rgbHint: "Click image to pick color",
+    rgbImageAlt: "Image to extract colors",
+    rgbHex: "HEX",
+    rgbCoord: "Coord",
+    rgbRecent: "Recent picks",
+
+    // Tool: TTS
+    ttsTitle: "Text to Speech",
+    ttsDesc: "Read text aloud using the browser's built-in speech synthesis engine with speed and pitch control.",
+    ttsVoice: "Voice",
+    ttsRate: "Speed",
+    ttsPitch: "Pitch",
+    ttsSpeak: "Speak",
+    ttsPause: "Pause",
+    ttsResume: "Resume",
+    ttsStop: "Stop",
+    ttsPleaseInput: "Please enter text to speak",
+    ttsError: "Speech failed",
+    ttsNoVoices: "No voices available in this browser. Text-to-speech may not work.",
+
+    // Tool: Calendar CN
+    calendarCnTitle: "China Calendar",
+    calendarCnDesc: "Gregorian and lunar calendar with mainland China public holidays and makeup workdays.",
+
+    // Tool: Calendar US
+    calendarUsTitle: "US Calendar",
+    calendarUsDesc: "United States federal holidays, including fixed-date and floating Monday holidays.",
+
+    // Calendar common
+    calendarToday: "Today",
+    calendarHoliday: "Public holiday",
+    calendarWorkday: "Makeup workday",
+    weekDays: "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+    monthNames: "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec",
+
+    // Tool: JSON
+    jsonTitle: "JSON Formatter",
+    jsonDesc: "Beautify, minify, and validate JSON. Supports key sorting and custom indentation.",
+    jsonInputLabel: "Input JSON",
+    jsonOutputLabel: "Output",
+    jsonInputPlaceholder: '{"hello": "world"}',
+    jsonOutputPlaceholder: "Formatted JSON...",
+    jsonPleaseInput: "Please enter JSON",
+    jsonFormatSuccess: "Formatted",
+    jsonMinifySuccess: "Minified",
+    jsonError: "Invalid JSON",
+    jsonSortKeys: "Sort keys",
+    jsonIndent: "Indent",
+
+    // Tool: Timestamp
+    timestampTitle: "Timestamp Converter",
+    timestampDesc: "Convert Unix timestamps to Beijing time and vice versa. Auto-detects seconds/milliseconds.",
+    timestampCurrent: "Current time",
+    timestampUseNow: "Use now",
+    timestampUnix: "Unix timestamp (seconds)",
+    timestampBeijing: "Beijing time",
+    timestampInvalid: "Please enter a valid timestamp",
+    timestampInvalidDate: "Invalid timestamp",
+    timestampToDate: "Timestamp → Date",
+    timestampToTimestamp: "Date → Timestamp",
+    timestampPlaceholder: "e.g. 1700000000",
+    timestampFilled: "Current time filled",
+
+    // Tool: Base64
+    base64Title: "Base64 Encoder/Decoder",
+    base64Desc: "Convert text to and from Base64. Supports Chinese characters.",
+    base64Source: "Plain text",
+    base64Encoded: "Base64",
+    base64Result: "Result...",
+    base64Encode: "Base64 Encode",
+    base64Decode: "Base64 Decode",
+    base64EncodeSuccess: "Encoded",
+    base64DecodeSuccess: "Decoded",
+    base64EncodeError: "Encoding failed",
+    base64DecodeError: "Decoding failed, please check Base64 format",
+
+    // File drop zone
+    dropzoneDrag: "Drop to upload",
+    dropzoneClick: "Click or drag image here",
+    dropzoneSupport: "Supports JPG, PNG, WebP, max {size}MB",
+    dropzoneNotImage: "Please upload an image file",
+    dropzoneTooLarge: "File too large, please upload an image smaller than {size}MB",
+  },
+} as const;
+
+export type Translations = typeof translations;
+export type TranslationKey = keyof Translations["zh"];
