@@ -6,6 +6,9 @@ import { LanguageToggle } from "./language-toggle";
 import { ThemeToggle } from "./theme-toggle";
 import { useI18n } from "@/lib/i18n";
 
+const GITHUB_URL = "https://github.com/ame420/toolbox";
+const AVATAR_URL = "https://github.com/ame420.png";
+
 export function SiteHeader() {
   const { t } = useI18n();
 
@@ -22,6 +25,20 @@ export function SiteHeader() {
         <div className="flex items-center gap-1">
           <LanguageToggle />
           <ThemeToggle />
+          <Link
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-1 flex h-8 w-8 items-center justify-center overflow-hidden rounded-full border border-border bg-background transition-colors hover:bg-accent"
+            aria-label="GitHub"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={AVATAR_URL}
+              alt="GitHub"
+              className="h-full w-full object-cover"
+            />
+          </Link>
         </div>
       </div>
     </header>

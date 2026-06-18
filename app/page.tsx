@@ -12,6 +12,9 @@ import {
   FileJson,
   Clock,
   Binary,
+  QrCode,
+  TextSearch,
+  Paintbrush,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { ToolCard } from "@/components/tool-card";
@@ -96,6 +99,27 @@ const TOOLS: ToolDef[] = [
     titleKey: "base64Title",
     descKey: "base64Desc",
     tags: ["dev"],
+  },
+  {
+    href: "/tools/qrcode",
+    icon: QrCode,
+    titleKey: "qrcodeTitle",
+    descKey: "qrcodeDesc",
+    tags: ["image", "dev"],
+  },
+  {
+    href: "/tools/regex",
+    icon: TextSearch,
+    titleKey: "regexTitle",
+    descKey: "regexDesc",
+    tags: ["dev", "text"],
+  },
+  {
+    href: "/tools/color",
+    icon: Paintbrush,
+    titleKey: "colorTitle",
+    descKey: "colorDesc",
+    tags: ["design", "dev"],
   },
 ];
 
