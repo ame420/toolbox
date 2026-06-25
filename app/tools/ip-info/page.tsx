@@ -7,6 +7,27 @@ import { ToolLayout } from "@/components/tool-layout";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 
+const CACHE_KEY = "toolbox_ip_info";
+const CACHE_TTL = 3600000;
+
+function getCached(): Record<string, unknown> | null {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (!raw) return null;
+    const { data, ts } = JSON.parse(raw);
+    if (Date.now() - ts > CACHE_TTL) return null;
+    return data;
+  } catch {
+    return null;
+  }
+}
+
+function setCached(data: Record<string, unknown>) {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify({ data, ts: Date.now() }));
+  } catch { /* ignore */ }
+}
+
 export default function IpInfoPage() {
   const { t } = useI18n();
   const [data, setData] = useState<Record<string, unknown> | null>(null);
@@ -16,33 +37,59 @@ export default function IpInfoPage() {
   const fetchIpInfo = async () => {
     setLoading(true);
     setError("");
-    try {
-      const res = await fetch("https://ipwho.is/");
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const json = await res.json();
-      if (!json.success) throw new Error(json.message || t("ipError"));
-      setData(json);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : String(e));
-    } finally {
+
+    const cached = getCached();
+    if (cached) {
+      setData(cached);
       setLoading(false);
+      return;
     }
+
+    const apis = [
+      "https://ipapi.co/json/",
+      "https://ipwho.is/",
+    ];
+
+    for (const url of apis) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) continue;
+        const json = await res.json();
+        if (json.error) continue;
+        if (url.includes("ipwho") && !json.success) continue;
+        setData(json);
+        setCached(json);
+        setLoading(false);
+        return;
+      } catch { /* try next */ }
+    }
+
+    setError(t("ipError"));
+    setLoading(false);
   };
 
   useEffect(() => { fetchIpInfo(); }, []);
 
-  const conn = data?.connection as Record<string, unknown> | undefined;
-  const tz = data?.timezone as Record<string, unknown> | undefined;
+  const getNested = (obj: unknown, path: string): string | undefined => {
+    try {
+      let cur = obj as Record<string, unknown>;
+      for (const key of path.split(".")) {
+        if (!cur || typeof cur !== "object") return undefined;
+        cur = cur[key] as Record<string, unknown>;
+      }
+      return typeof cur === "string" ? cur : undefined;
+    } catch { return undefined; }
+  };
 
   const rows = data ? [
-    { icon: Globe, label: t("ipAddress"), value: data.ip as string },
-    { icon: Flag, label: t("ipCountry"), value: `${data.country} (${data.country_code})` },
-    { icon: MapPin, label: t("ipRegion"), value: `${data.city}, ${data.region}` },
-    { icon: Globe, label: t("ipCoord"), value: `${data.latitude}, ${data.longitude}` },
-    { icon: Globe, label: t("ipTimezone"), value: (tz?.id as string) || "-" },
-    { icon: Building, label: t("ipIsp"), value: (conn?.isp as string) || "-" },
-    { icon: Building, label: t("ipOrg"), value: (conn?.org as string) || "-" },
-    { icon: Building, label: t("ipAs"), value: (conn?.asn as string) || "-" },
+    { icon: Globe, label: t("ipAddress"), value: (data.ip || data.query || "") as string },
+    { icon: Flag, label: t("ipCountry"), value: `${data.country || data.country_name} (${data.country_code || data.countryCode})` },
+    { icon: MapPin, label: t("ipRegion"), value: `${data.city || ""}, ${data.region || data.regionName || ""}` },
+    { icon: Globe, label: t("ipCoord"), value: `${data.latitude || data.lat}, ${data.longitude || data.lon}` },
+    { icon: Globe, label: t("ipTimezone"), value: (data.timezone as string) || getNested(data, "timezone.id") || "-" },
+    { icon: Building, label: t("ipIsp"), value: (data.org as string) || getNested(data, "connection.isp") || "-" },
+    { icon: Building, label: t("ipOrg"), value: (data.org as string) || getNested(data, "connection.org") || "-" },
+    { icon: Building, label: t("ipAs"), value: (data.asn as string) || getNested(data, "connection.asn") || "-" },
   ] : [];
 
   return (
