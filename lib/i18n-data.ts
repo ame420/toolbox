@@ -353,7 +353,8 @@ export const translations = {
     calculatorDisplay: "显示",
 
     // Site analytics
-    analytics: "访问统计由 Vercel Analytics 提供",
+    visitorCount: "总访问量：",
+    visitorUnit: " 次",
   },
   en: {
     // Site
@@ -707,7 +708,8 @@ export const translations = {
     calculatorDisplay: "Display",
 
     // Site analytics
-    analytics: "Analytics powered by Vercel Analytics",
+    visitorCount: "Total Visits: ",
+    visitorUnit: "",
   },
 } as const;
 
