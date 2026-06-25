@@ -26,7 +26,6 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { ToolCard } from "@/components/tool-card";
 import { CategoryFilter, type CategoryId } from "@/components/category-filter";
-import { VisitorCounter } from "@/components/visitor-counter";
 import { useI18n } from "@/lib/i18n";
 
 interface ToolDef {
@@ -232,7 +231,13 @@ export default function Home() {
       <footer className="border-t bg-card py-6">
         <div className="mx-auto max-w-7xl space-y-1 px-4 text-center text-sm text-muted-foreground sm:px-6 lg:px-8">
           <p>{t("footer")}</p>
-          <p><VisitorCounter /></p>
+          <p>
+            {t("busuanziUv")}
+            <span id="busuanzi_value_site_uv" className="tabular-nums">…</span>
+            {t("busuanziPv")}
+            <span id="busuanzi_value_site_pv" className="tabular-nums">…</span>
+            {t("busuanziSuffix")}
+          </p>
         </div>
       </footer>
     </div>

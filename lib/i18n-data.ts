@@ -352,9 +352,10 @@ export const translations = {
     calculatorDesc: "支持基本四则运算、百分比、正负号切换的简易计算器。",
     calculatorDisplay: "显示",
 
-    // Site analytics
-    visitorCount: "总访问量：",
-    visitorUnit: " 次",
+    // Site analytics (Busuanzi)
+    busuanziUv: "本站访客数 ",
+    busuanziPv: " 人 · 本站总访问量 ",
+    busuanziSuffix: " 次",
   },
   en: {
     // Site
@@ -707,9 +708,10 @@ export const translations = {
     calculatorDesc: "A simple calculator supporting basic arithmetic, percentage, and sign toggle.",
     calculatorDisplay: "Display",
 
-    // Site analytics
-    visitorCount: "Total Visits: ",
-    visitorUnit: "",
+    // Site analytics (Busuanzi)
+    busuanziUv: "Visitors ",
+    busuanziPv: " · Page views ",
+    busuanziSuffix: "",
   },
 } as const;
 

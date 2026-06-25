@@ -28,6 +28,10 @@ export default function RootLayout({
             <Analytics />
           </I18nProvider>
         </ThemeProvider>
+        <script
+          src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+          async
+        />
       </body>
     </html>
   );
