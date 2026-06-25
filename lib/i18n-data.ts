@@ -347,6 +347,11 @@ export const translations = {
     hashUppercase: "大写字母",
     hashPleaseInput: "请输入要计算哈希的文本",
 
+    // Tool: Calculator
+    calculatorTitle: "计算器",
+    calculatorDesc: "支持基本四则运算、百分比、正负号切换的简易计算器。",
+    calculatorDisplay: "显示",
+
     // Site analytics
     analytics: "访问统计由 Vercel Analytics 提供",
   },
@@ -695,6 +700,11 @@ export const translations = {
     hashSha512: "SHA-512",
     hashUppercase: "Uppercase",
     hashPleaseInput: "Please enter text to hash",
+
+    // Tool: Calculator
+    calculatorTitle: "Calculator",
+    calculatorDesc: "A simple calculator supporting basic arithmetic, percentage, and sign toggle.",
+    calculatorDisplay: "Display",
 
     // Site analytics
     analytics: "Analytics powered by Vercel Analytics",

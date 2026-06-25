@@ -21,6 +21,7 @@ import {
   FileText,
   Image,
   Hash,
+  Calculator,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { ToolCard } from "@/components/tool-card";
@@ -168,6 +169,13 @@ const TOOLS: ToolDef[] = [
     titleKey: "hashTitle",
     descKey: "hashDesc",
     tags: ["security", "dev"],
+  },
+  {
+    href: "/tools/calculator",
+    icon: Calculator,
+    titleKey: "calculatorTitle",
+    descKey: "calculatorDesc",
+    tags: ["dev"],
   },
 ];
 

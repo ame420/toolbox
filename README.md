@@ -28,6 +28,7 @@ https://toolbox-roan-iota.vercel.app
 - 📝 **Markdown 编辑器**：实时预览 Markdown，支持导出 HTML
 - 🖼️ **图片压缩**：浏览器端压缩并转换图片格式（JPG/PNG/WebP）
 - #️⃣ **哈希生成器**：MD5 / SHA-1 / SHA-256 / SHA-512 文本哈希
+- 🧮 **计算器**：支持基本四则运算、百分比、正负号切换，键盘输入
 - 📊 **访问统计**：集成 Vercel Analytics，保护隐私的流量分析
 - 🌐 **多语言**：支持中文 / 英文切换
 - 🎨 **多主题**：浅色、深色、蓝色、绿色四种主题
@@ -110,7 +111,8 @@ toolbox/
 │       ├── unit/           # 单位换算器
 │       ├── markdown/       # Markdown 编辑器
 │       ├── compress/       # 图片压缩
-│       └── hash/           # 哈希生成器
+│       ├── hash/           # 哈希生成器
+│       └── calculator/     # 计算器
 ├── components/             # 公共组件
 │   ├── ui/                 # shadcn/ui 组件
 │   ├── site-header.tsx     # 全局头部（语言/主题切换）
