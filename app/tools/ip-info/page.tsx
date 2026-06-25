@@ -7,26 +7,9 @@ import { ToolLayout } from "@/components/tool-layout";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 
-interface IpInfo {
-  ip: string;
-  country: string;
-  countryCode: string;
-  region: string;
-  regionName: string;
-  city: string;
-  zip: string;
-  lat: number;
-  lon: number;
-  timezone: string;
-  isp: string;
-  org: string;
-  as: string;
-  query: string;
-}
-
 export default function IpInfoPage() {
   const { t } = useI18n();
-  const [data, setData] = useState<IpInfo | null>(null);
+  const [data, setData] = useState<Record<string, unknown> | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -34,10 +17,10 @@ export default function IpInfoPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("https://ip-api.com/json/?fields=66842623");
+      const res = await fetch("https://ipwho.is/");
       if (!res.ok) throw new Error("HTTP " + res.status);
       const json = await res.json();
-      if (json.status === "fail") throw new Error(json.message || t("ipError"));
+      if (!json.success) throw new Error(json.message || t("ipError"));
       setData(json);
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
@@ -48,15 +31,18 @@ export default function IpInfoPage() {
 
   useEffect(() => { fetchIpInfo(); }, []);
 
+  const conn = data?.connection as Record<string, unknown> | undefined;
+  const tz = data?.timezone as Record<string, unknown> | undefined;
+
   const rows = data ? [
-    { icon: Globe, label: t("ipAddress"), value: data.query },
-    { icon: Flag, label: t("ipCountry"), value: `${data.country} (${data.countryCode})` },
-    { icon: MapPin, label: t("ipRegion"), value: `${data.city}, ${data.regionName} (${data.region})` },
-    { icon: Globe, label: t("ipCoord"), value: `${data.lat}, ${data.lon}` },
-    { icon: Globe, label: t("ipTimezone"), value: data.timezone },
-    { icon: Building, label: t("ipIsp"), value: data.isp || "-" },
-    { icon: Building, label: t("ipOrg"), value: data.org || "-" },
-    { icon: Building, label: t("ipAs"), value: data.as || "-" },
+    { icon: Globe, label: t("ipAddress"), value: data.ip as string },
+    { icon: Flag, label: t("ipCountry"), value: `${data.country} (${data.country_code})` },
+    { icon: MapPin, label: t("ipRegion"), value: `${data.city}, ${data.region}` },
+    { icon: Globe, label: t("ipCoord"), value: `${data.latitude}, ${data.longitude}` },
+    { icon: Globe, label: t("ipTimezone"), value: (tz?.id as string) || "-" },
+    { icon: Building, label: t("ipIsp"), value: (conn?.isp as string) || "-" },
+    { icon: Building, label: t("ipOrg"), value: (conn?.org as string) || "-" },
+    { icon: Building, label: t("ipAs"), value: (conn?.asn as string) || "-" },
   ] : [];
 
   return (
