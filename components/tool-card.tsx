@@ -17,6 +17,8 @@ const CATEGORY_LABEL_KEYS: Record<CategoryId, string> = {
   calendar: "categoryCalendar",
   dev: "categoryDev",
   time: "categoryTime",
+  network: "categoryNetwork",
+  daily: "categoryDaily",
 };
 
 export interface ToolCardProps {

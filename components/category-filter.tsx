@@ -14,6 +14,8 @@ export const CATEGORIES = [
   "calendar",
   "dev",
   "time",
+  "network",
+  "daily",
 ] as const;
 
 export type CategoryId = (typeof CATEGORIES)[number];
@@ -44,6 +46,8 @@ const CATEGORY_LABEL_KEYS: Record<CategoryId, string> = {
   calendar: "categoryCalendar",
   dev: "categoryDev",
   time: "categoryTime",
+  network: "categoryNetwork",
+  daily: "categoryDaily",
 };
 
 interface CategoryFilterProps {

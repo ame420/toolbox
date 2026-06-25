@@ -22,6 +22,10 @@ import {
   Image,
   Hash,
   Calculator,
+  Globe,
+  MapPin,
+  Weight,
+  CalendarRange,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { ToolCard } from "@/components/tool-card";
@@ -49,7 +53,7 @@ const TOOLS: ToolDef[] = [
     icon: KeyRound,
     titleKey: "passwordTitle",
     descKey: "passwordDesc",
-    tags: ["security"],
+    tags: ["security", "daily"],
   },
   {
     href: "/tools/ocr",
@@ -70,7 +74,7 @@ const TOOLS: ToolDef[] = [
     icon: Volume2,
     titleKey: "ttsTitle",
     descKey: "ttsDesc",
-    tags: ["voice"],
+    tags: ["voice", "daily"],
   },
   {
     href: "/tools/calendar-cn",
@@ -147,7 +151,7 @@ const TOOLS: ToolDef[] = [
     icon: Ruler,
     titleKey: "unitTitle",
     descKey: "unitDesc",
-    tags: ["dev", "time"],
+    tags: ["daily", "time"],
   },
   {
     href: "/tools/markdown",
@@ -175,7 +179,35 @@ const TOOLS: ToolDef[] = [
     icon: Calculator,
     titleKey: "calculatorTitle",
     descKey: "calculatorDesc",
-    tags: ["dev"],
+    tags: ["daily"],
+  },
+  {
+    href: "/tools/api-request",
+    icon: Globe,
+    titleKey: "apiTitle",
+    descKey: "apiDesc",
+    tags: ["dev", "network"],
+  },
+  {
+    href: "/tools/ip-info",
+    icon: MapPin,
+    titleKey: "ipTitle",
+    descKey: "ipDesc",
+    tags: ["network"],
+  },
+  {
+    href: "/tools/bmi",
+    icon: Weight,
+    titleKey: "bmiTitle",
+    descKey: "bmiDesc",
+    tags: ["daily"],
+  },
+  {
+    href: "/tools/date-calc",
+    icon: CalendarRange,
+    titleKey: "dateTitle",
+    descKey: "dateDesc",
+    tags: ["daily", "calendar"],
   },
 ];
 
