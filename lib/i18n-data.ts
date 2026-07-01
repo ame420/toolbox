@@ -184,7 +184,7 @@ export const translations = {
 
     // File drop zone
     dropzoneDrag: "释放以上传",
-    dropzoneClick: "点击或拖拽图片到此处",
+    dropzoneClick: "点击、拖拽或按 Ctrl+V（⌘+V）粘贴图片",
     dropzoneSupport: "支持 JPG、PNG、WebP，最大 {size}MB",
     dropzoneNotImage: "请上传图片文件",
     dropzoneTooLarge: "文件过大，请上传小于 {size}MB 的图片",
@@ -780,7 +780,7 @@ export const translations = {
 
     // File drop zone
     dropzoneDrag: "Drop to upload",
-    dropzoneClick: "Click or drag image here",
+    dropzoneClick: "Click, drag, or press Ctrl+V (⌘+V) to paste image",
     dropzoneSupport: "Supports JPG, PNG, WebP, max {size}MB",
     dropzoneNotImage: "Please upload an image file",
     dropzoneTooLarge: "File too large, please upload an image smaller than {size}MB",
