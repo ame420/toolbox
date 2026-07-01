@@ -68,7 +68,12 @@ export default function IpInfoPage() {
     setLoading(false);
   };
 
-  useEffect(() => { fetchIpInfo(); }, []);
+  useEffect(() => {
+    const load = async () => {
+      await fetchIpInfo();
+    };
+    load();
+  }, []);
 
   const getNested = (obj: unknown, path: string): string | undefined => {
     try {
