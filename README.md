@@ -118,7 +118,6 @@ toolbox/
 │       ├── hash/           # 哈希生成器
 │       ├── calculator/     # 计算器
 │       ├── api-request/    # API 请求工具
-│       ├── ip-info/        # IP 信息查询
 │       ├── bmi/            # BMI 计算器
 │       └── date-calc/      # 日期计算器
 ├── components/             # 公共组件

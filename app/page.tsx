@@ -23,7 +23,6 @@ import {
   Hash,
   Calculator,
   Globe,
-  MapPin,
   Weight,
   CalendarRange,
   Link,
@@ -197,13 +196,6 @@ const TOOLS: ToolDef[] = [
     titleKey: "apiTitle",
     descKey: "apiDesc",
     tags: ["dev", "network"],
-  },
-  {
-    href: "/tools/ip-info",
-    icon: MapPin,
-    titleKey: "ipTitle",
-    descKey: "ipDesc",
-    tags: ["network"],
   },
   {
     href: "/tools/bmi",

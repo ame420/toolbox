@@ -368,21 +368,6 @@ export const translations = {
     apiResponseHeaders: "响应头",
     apiResponseBody: "响应体",
 
-    // Tool: IP Info
-    ipTitle: "IP 信息查询",
-    ipDesc: "查询本机公网 IP 地址及地理位置、运营商等详细信息。",
-    ipRefresh: "刷新",
-    ipLoading: "查询中...",
-    ipError: "查询失败",
-    ipAddress: "IP 地址",
-    ipCountry: "国家",
-    ipRegion: "地区",
-    ipCoord: "坐标",
-    ipTimezone: "时区",
-    ipIsp: "ISP",
-    ipOrg: "组织",
-    ipAs: "ASN",
-
     // Tool: BMI Calculator
     bmiTitle: "BMI 计算器",
     bmiDesc: "根据身高体重计算身体质量指数（BMI），判断体型。",
@@ -963,21 +948,6 @@ export const translations = {
     apiBodyPlaceholder: 'Request body (JSON):\n{"key": "value"}',
     apiResponseHeaders: "Response Headers",
     apiResponseBody: "Response Body",
-
-    // Tool: IP Info
-    ipTitle: "IP Info",
-    ipDesc: "Look up your public IP address, geolocation, ISP and more.",
-    ipRefresh: "Refresh",
-    ipLoading: "Loading...",
-    ipError: "Failed to look up",
-    ipAddress: "IP Address",
-    ipCountry: "Country",
-    ipRegion: "Region",
-    ipCoord: "Coordinates",
-    ipTimezone: "Timezone",
-    ipIsp: "ISP",
-    ipOrg: "Organization",
-    ipAs: "ASN",
 
     // Tool: BMI Calculator
     bmiTitle: "BMI Calculator",
