@@ -1,5 +1,7 @@
 # 在线小工具箱 · Online Toolbox
 
+[English README](README.en.md)
+
 一个免费、开源、可一键部署到 Vercel 的在线实用小工具集合。所有数据处理均在浏览器本地完成，保护隐私。
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ame420/toolbox)
@@ -30,7 +32,6 @@ https://toolbox-roan-iota.vercel.app
 - #️⃣ **哈希生成器**：MD5 / SHA-1 / SHA-256 / SHA-512 文本哈希
 - 🧮 **计算器**：支持基本四则运算、百分比、正负号切换，键盘输入
 - 🌐 **API 请求工具**：发送 HTTP 请求并查看响应，支持自定义请求头与请求体
-- 📍 **IP 信息查询**：查询本机公网 IP 地址及地理位置、运营商等详细信息
 - 🏋️ **BMI 计算器**：根据身高体重计算身体质量指数，判断体型
 - 📅 **日期计算器**：计算两个日期相差天数，支持日期加减运算
 - 📊 **访问统计**：不蒜子访客计数器，显示 UV 与 PV

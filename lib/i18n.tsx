@@ -20,13 +20,13 @@ interface I18nContextValue {
 const I18nContext = createContext<I18nContextValue | null>(null);
 
 function getInitialLang(): Lang {
-  if (typeof window === "undefined") return "zh";
+  if (typeof window === "undefined") return "en";
   const saved = localStorage.getItem(LANG_KEY) as Lang | null;
-  return saved === "zh" || saved === "en" ? saved : "zh";
+  return saved === "zh" || saved === "en" ? saved : "en";
 }
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("zh");
+  const [lang, setLangState] = useState<Lang>("en");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
