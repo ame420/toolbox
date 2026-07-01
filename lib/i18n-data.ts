@@ -577,6 +577,61 @@ export const translations = {
     textTransformInvalidBase64: "无效的 Base64",
     textTransformInvalidUrl: "无效的 URL 编码",
 
+    // Tool: Image to Base64
+    imgToBase64Title: "图片转 Base64",
+    imgToBase64Desc: "将图片转换为 Base64 DataURL，支持复制与下载。",
+    imgToBase64Result: "Base64 结果",
+    imgToBase64Format: "格式",
+    imgToBase64Copy: "复制 Base64",
+    imgToBase64Download: "下载图片",
+
+    // Tool: Placeholder Image
+    placeholderTitle: "占位图生成器",
+    placeholderDesc: "按尺寸、颜色与文字生成占位图片。",
+    placeholderWidth: "宽度",
+    placeholderHeight: "高度",
+    placeholderBgColor: "背景色",
+    placeholderTextColor: "文字颜色",
+    placeholderText: "文字内容",
+    placeholderFontSize: "字体大小",
+    placeholderGenerate: "生成占位图",
+    placeholderDownload: "下载图片",
+
+    // Tool: Lorem Ipsum
+    loremTitle: "Lorem Ipsum 生成器",
+    loremDesc: "生成指定段落数与字数的中文或英文占位文本。",
+    loremParagraphs: "段落数",
+    loremWordsPerParagraph: "每段字数",
+    loremLanguage: "语言",
+    loremChinese: "中文",
+    loremEnglish: "英文",
+    loremGenerate: "生成文本",
+
+    // Tool: HTTP Status
+    httpStatusTitle: "HTTP 状态码速查",
+    httpStatusDesc: "按状态码或名称查询 HTTP 状态含义。",
+    httpStatusSearch: "搜索状态码或名称",
+    httpStatusCode: "状态码",
+    httpStatusName: "名称",
+    httpStatusDescription: "含义",
+    httpStatusCategory: "分类",
+    httpStatusCopy: "复制状态码",
+
+    // Tool: Pomodoro
+    pomodoroTitle: "番茄钟",
+    pomodoroDesc: "25 分钟专注工作与 5 分钟休息的循环计时器。",
+    pomodoroWork: "专注中",
+    pomodoroBreak: "休息中",
+    pomodoroStart: "开始",
+    pomodoroPause: "暂停",
+    pomodoroReset: "重置",
+    pomodoroMinutes: "分钟",
+    pomodoroSeconds: "秒",
+    pomodoroWorkComplete: "专注时间结束，休息一下吧",
+    pomodoroBreakComplete: "休息结束，继续专注",
+    pomodoroCustomWork: "专注时长",
+    pomodoroCustomBreak: "休息时长",
+
     // Site analytics (Busuanzi)
     busuanziUv: "本站访客数 ",
     busuanziPv: " 人 · 本站总访问量 ",
@@ -1157,6 +1212,61 @@ export const translations = {
     textTransformClear: "Clear transforms",
     textTransformInvalidBase64: "Invalid Base64",
     textTransformInvalidUrl: "Invalid URL encoding",
+
+    // Tool: Image to Base64
+    imgToBase64Title: "Image to Base64",
+    imgToBase64Desc: "Convert images to Base64 DataURL with copy and download support.",
+    imgToBase64Result: "Base64 result",
+    imgToBase64Format: "Format",
+    imgToBase64Copy: "Copy Base64",
+    imgToBase64Download: "Download image",
+
+    // Tool: Placeholder Image
+    placeholderTitle: "Placeholder Image",
+    placeholderDesc: "Generate placeholder images by size, color and text.",
+    placeholderWidth: "Width",
+    placeholderHeight: "Height",
+    placeholderBgColor: "Background color",
+    placeholderTextColor: "Text color",
+    placeholderText: "Text content",
+    placeholderFontSize: "Font size",
+    placeholderGenerate: "Generate placeholder",
+    placeholderDownload: "Download image",
+
+    // Tool: Lorem Ipsum
+    loremTitle: "Lorem Ipsum Generator",
+    loremDesc: "Generate Chinese or English placeholder text with custom paragraph and word counts.",
+    loremParagraphs: "Paragraphs",
+    loremWordsPerParagraph: "Words per paragraph",
+    loremLanguage: "Language",
+    loremChinese: "Chinese",
+    loremEnglish: "English",
+    loremGenerate: "Generate text",
+
+    // Tool: HTTP Status
+    httpStatusTitle: "HTTP Status Code Lookup",
+    httpStatusDesc: "Search HTTP status codes by code or name.",
+    httpStatusSearch: "Search status code or name",
+    httpStatusCode: "Code",
+    httpStatusName: "Name",
+    httpStatusDescription: "Description",
+    httpStatusCategory: "Category",
+    httpStatusCopy: "Copy status code",
+
+    // Tool: Pomodoro
+    pomodoroTitle: "Pomodoro Timer",
+    pomodoroDesc: "A 25-minute focus and 5-minute break cycle timer.",
+    pomodoroWork: "Focusing",
+    pomodoroBreak: "Break",
+    pomodoroStart: "Start",
+    pomodoroPause: "Pause",
+    pomodoroReset: "Reset",
+    pomodoroMinutes: "minutes",
+    pomodoroSeconds: "seconds",
+    pomodoroWorkComplete: "Focus time is over, take a break",
+    pomodoroBreakComplete: "Break is over, back to focus",
+    pomodoroCustomWork: "Focus duration",
+    pomodoroCustomBreak: "Break duration",
 
     // Site analytics (Busuanzi)
     busuanziUv: "Visitors ",

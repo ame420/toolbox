@@ -35,6 +35,7 @@ import {
   CodeXml,
   Contact,
   Type,
+  ImagePlus,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { ToolCard } from "@/components/tool-card";
@@ -280,6 +281,41 @@ const TOOLS: ToolDef[] = [
     titleKey: "textTransformTitle",
     descKey: "textTransformDesc",
     tags: ["text", "dev"],
+  },
+  {
+    href: "/tools/img-to-base64",
+    icon: Image,
+    titleKey: "imgToBase64Title",
+    descKey: "imgToBase64Desc",
+    tags: ["image", "dev"],
+  },
+  {
+    href: "/tools/placeholder",
+    icon: ImagePlus,
+    titleKey: "placeholderTitle",
+    descKey: "placeholderDesc",
+    tags: ["image", "design"],
+  },
+  {
+    href: "/tools/lorem",
+    icon: FileText,
+    titleKey: "loremTitle",
+    descKey: "loremDesc",
+    tags: ["text", "dev"],
+  },
+  {
+    href: "/tools/http-status",
+    icon: Globe,
+    titleKey: "httpStatusTitle",
+    descKey: "httpStatusDesc",
+    tags: ["dev", "network"],
+  },
+  {
+    href: "/tools/pomodoro",
+    icon: Timer,
+    titleKey: "pomodoroTitle",
+    descKey: "pomodoroDesc",
+    tags: ["time", "daily"],
   },
 ];
 
