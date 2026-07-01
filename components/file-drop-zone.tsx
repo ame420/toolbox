@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Upload, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -81,6 +81,32 @@ export function FileDropZone({
   const clear = () => {
     setFileName(null);
   };
+
+  const onPaste = useCallback(
+    (e: ClipboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.tagName === "INPUT" ||
+          target.tagName === "TEXTAREA" ||
+          target.isContentEditable)
+      ) {
+        return;
+      }
+
+      const file = e.clipboardData?.files?.[0];
+      if (file) {
+        e.preventDefault();
+        handleFile(file);
+      }
+    },
+    [handleFile]
+  );
+
+  useEffect(() => {
+    window.addEventListener("paste", onPaste);
+    return () => window.removeEventListener("paste", onPaste);
+  }, [onPaste]);
 
   return (
     <div
