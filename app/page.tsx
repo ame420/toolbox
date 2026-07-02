@@ -36,6 +36,10 @@ import {
   Contact,
   Type,
   ImagePlus,
+  BookOpen,
+  UserCircle,
+  Smile,
+  Monitor,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { ToolCard } from "@/components/tool-card";
@@ -316,6 +320,62 @@ const TOOLS: ToolDef[] = [
     titleKey: "pomodoroTitle",
     descKey: "pomodoroDesc",
     tags: ["time", "daily"],
+  },
+  {
+    href: "/tools/ascii-art",
+    icon: Type,
+    titleKey: "asciiArtTitle",
+    descKey: "asciiArtDesc",
+    tags: ["text", "design"],
+  },
+  {
+    href: "/tools/classical-text",
+    icon: BookOpen,
+    titleKey: "classicalTextTitle",
+    descKey: "classicalTextDesc",
+    tags: ["text", "daily"],
+  },
+  {
+    href: "/tools/fake-identity",
+    icon: UserCircle,
+    titleKey: "fakeIdentityTitle",
+    descKey: "fakeIdentityDesc",
+    tags: ["daily", "security"],
+  },
+  {
+    href: "/tools/world-clock",
+    icon: Globe,
+    titleKey: "worldClockTitle",
+    descKey: "worldClockDesc",
+    tags: ["time", "daily"],
+  },
+  {
+    href: "/tools/timer",
+    icon: Timer,
+    titleKey: "timerTitle",
+    descKey: "timerDesc",
+    tags: ["time", "daily"],
+  },
+  {
+    href: "/tools/mortgage",
+    icon: Calculator,
+    titleKey: "mortgageTitle",
+    descKey: "mortgageDesc",
+    tags: ["daily"],
+  },
+  {
+    href: "/tools/emoji",
+    icon: Smile,
+    titleKey: "emojiTitle",
+    descKey: "emojiDesc",
+    tags: ["text", "daily"],
+  },
+  {
+    href: "/tools/screen-sizes",
+    icon: Monitor,
+    titleKey: "screenSizesTitle",
+    descKey: "screenSizesDesc",
+    tags: ["design", "dev"],
   },
 ];
 
