@@ -353,6 +353,7 @@ export const translations = {
     calculatorTitle: "计算器",
     calculatorDesc: "支持基本四则运算、百分比、正负号切换的简易计算器。",
     calculatorDisplay: "显示",
+    calculatorInputPlaceholder: "输入表达式，如 12.5+7.5×2",
 
     // Tool: API Request
     apiTitle: "API 请求工具",
@@ -1091,6 +1092,7 @@ export const translations = {
     calculatorTitle: "Calculator",
     calculatorDesc: "A simple calculator supporting basic arithmetic, percentage, and sign toggle.",
     calculatorDisplay: "Display",
+    calculatorInputPlaceholder: "Enter expression, e.g. 12.5+7.5×2",
 
     // Tool: API Request
     apiTitle: "API Request Tool",
