@@ -319,6 +319,8 @@ export const translations = {
     markdownInputPlaceholder: "输入 Markdown 内容...",
     markdownPreview: "预览",
     markdownExportHtml: "导出 HTML",
+    fullscreen: "全屏",
+    exitFullscreen: "退出全屏",
 
     // Tool: Image Compressor
     compressTitle: "图片压缩",
@@ -1058,6 +1060,8 @@ export const translations = {
     markdownInputPlaceholder: "Enter Markdown content...",
     markdownPreview: "Preview",
     markdownExportHtml: "Export HTML",
+    fullscreen: "Fullscreen",
+    exitFullscreen: "Exit Fullscreen",
 
     // Tool: Image Compressor
     compressTitle: "Image Compressor",
